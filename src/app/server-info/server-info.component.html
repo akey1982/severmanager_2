@@ -1,0 +1,31 @@
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1"> add value via ref</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="value" #refernce>
+  </div>
+
+  <button (click)="getValueByref(refernce)"  type="submit" class="btn btn-primary">Submit</button>
+ 
+  <h1>{{byRef}}</h1>
+  
+
+  
+</form>
+
+
+
+<form>
+    <div class="form-group">
+      <label for="exampleInputEmail1"> add value via view child</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="value" #otherRef>
+    </div>
+  
+    <button (click)="getValuebyChild(otherRef)"  type="submit" class="btn btn-primary">Submit</button>
+   
+    <h1>{{byViewchild}}</h1>
+    
+  
+    
+  </form>
+  
