@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { ServerInfoComponent } from './server-info/server-info.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CockpitComponent,
     ServerElementComponent,
-    ServerInfoComponent
+    ServerInfoComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

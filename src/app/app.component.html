@@ -3,7 +3,19 @@
  
   <hr>
   <div class="row">
-    <app-server-element  *ngFor="let serverElement of serverElements" [element]="serverElement"   >{{serverElement}}</app-server-element>
+
+    <button class="btn-primary" (click)="changeName()"> update server name </button>
+
+    <app-server-element  *ngFor="let serverElement of serverElements" [element]="serverElement"  [name]="serverElement.name" >
+
+      <p>
+        <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
+        <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
+      </p>
+
+
+
+    </app-server-element>
   </div>
 </div>
 
@@ -20,3 +32,11 @@
   </div>
 
 </div>
+
+<div >
+
+
+</div>
+
+<app-card>  <a href="#" class="btn btn-primary">Go somewhere</a></app-card>
+<app-card>  <a href="#" class="btn btn-primary">easy</a></app-card>

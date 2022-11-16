@@ -11,8 +11,6 @@ export class AppComponent {
 
 
   emitAddServer(serverData:{name:string, content:string}) {
-  console.log(serverData+'data--------------')
-   
     this.serverElements.push({
        type: 'server',
        name: serverData.name,
@@ -31,6 +29,12 @@ export class AppComponent {
      }); 
    }
 
+changeName(){
 
+
+  this.serverElements[0].name = 'changed'
+
+
+}
 
 }
